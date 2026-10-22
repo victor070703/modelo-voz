@@ -1,10 +1,6 @@
 # modelo-voz
 
-Modelo de reconhecimento de voz **faster-whisper "small"** (licença MIT, original: [Systran/faster-whisper-small](https://huggingface.co/Systran/faster-whisper-small)), guardado aqui para a skill `skill-edicao-video` transcrever vídeos com tempo por palavra em ambientes onde o Hugging Face não é acessível.
+Somente **dados**: modelo de reconhecimento de voz faster-whisper "small" (licença MIT, original: Systran/faster-whisper-small), usado pela skill `skill-edicao-video`. O código de transcrição fica na própria skill.
 
-O `model.bin` foi dividido em partes de 90 MB (limite de 100 MB do GitHub).
-
-```bash
-git clone --depth 1 https://github.com/victor070703/modelo-voz.git
-python3 modelo-voz/transcrever.py video.mp4          # gera video.words.json
-```
+O `model.bin` foi dividido em partes de 90 MB (limite do GitHub). Para juntar: `cat model.bin.part_* > model.bin`
+(sha256: 3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671).
